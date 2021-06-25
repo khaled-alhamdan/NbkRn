@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { StyleSheet, ImageBackground, Dimensions } from "react-native";
 
-window = Dimensions.get("window");
+
 
 const Splashscreen = ({ setIsLoading }) => {
   useEffect(() => {
@@ -25,6 +25,9 @@ export default Splashscreen;
 const styles = StyleSheet.create({
   bgImage: {
     flex: 1,
-    width: window.width,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 300,
+    height: 400,
   },
 });

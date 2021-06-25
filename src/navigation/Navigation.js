@@ -1,7 +1,7 @@
 import React from "react";
 
 // Importing Stores
-// import userStore from "../stores/userStore";
+
 import { observer } from "mobx-react";
 
 //import stack navigator
@@ -14,6 +14,7 @@ import Signin from "../screens/AuthPages/Signin";
 // Icons and styling
 import { Entypo, MaterialIcons, Feather } from "@expo/vector-icons";
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
+import authStore from "../mobx/Auth";
 
 const AuthPagesStack = createStackNavigator();
 const AuthPageScreens = () => {
@@ -77,8 +78,11 @@ const AuthPageScreens = () => {
 const Navigation = () => {
   return (
     <>
-      <AuthPageScreens />
-      {/* <Drawer /> */}
+      {authStore.user ?
+         <Drawer />:
+         <AuthPageScreens />
+
+    }
     </>
   );
 };

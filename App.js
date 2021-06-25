@@ -7,6 +7,7 @@ import Splashscreen from "./src/screens/AuthPages/Splashscreen";
 // Importing navigation
 import Navigation from "./src/navigation/Navigation";
 import { NavigationContainer } from "@react-navigation/native";
+import Home from "./src/screens/App/Home";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +20,7 @@ const App = () => {
         <Navigation />
       </NavigationContainer>
       <StatusBar style="auto" />
+
     </>
   );
 };

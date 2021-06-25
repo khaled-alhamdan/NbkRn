@@ -1,7 +1,7 @@
 import React from "react";
 
 // Importing Stores
-// import userStore from "../stores/userStore";
+
 import { observer } from "mobx-react";
 
 import { View, StyleSheet } from "react-native";
@@ -14,10 +14,11 @@ import {
 
 // Icons
 import { SimpleLineIcons, Entypo } from "@expo/vector-icons";
+import authStore from "../mobx/Auth";
 
 const DrawerContent = (props) => {
   const handleSubmit = async () => {
-    //   await userStore.signout();
+      await authStore.signout();
   };
 
   return (

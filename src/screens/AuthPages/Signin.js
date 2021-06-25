@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-// Importing stores and mobx-observer
-// import userStore from "../../stores/userStore";
+
+
 import { observer } from "mobx-react";
 
 // Styling dependences
@@ -20,6 +20,7 @@ window = Dimensions.get("window");
 
 // Importing Icons
 import { AntDesign } from "@expo/vector-icons";
+import authStore from "../../mobx/Auth";
 
 // Dummy data
 const authServices = [
@@ -42,8 +43,9 @@ const Signin = () => {
     password: "",
   });
 
-  const handleSubmit = async () => {
-    // await userStore.signin(user);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await authStore.signIn(user);
   };
 
   const renderItem = ({ item, index }) => {
