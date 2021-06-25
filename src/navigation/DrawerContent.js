@@ -13,7 +13,7 @@ import {
 } from "@react-navigation/drawer";
 
 // Icons
-import { SimpleLineIcons, Entypo } from "@expo/vector-icons";
+import { SimpleLineIcons, Entypo,MaterialCommunityIcons } from "@expo/vector-icons";
 import authStore from "../mobx/Auth";
 
 const DrawerContent = (props) => {
@@ -43,6 +43,21 @@ const DrawerContent = (props) => {
         onPress={() => props.navigation.navigate("Home")}
         icon={() => <Entypo name="home" size={28} color="white" />}
       />
+      {/* Transfers*/}
+      <DrawerItem
+        label="Transfers"
+        labelStyle={{
+          color: "white",
+          marginLeft: -15,
+          fontSize: 16,
+          width: 150,
+          fontWeight: "bold",
+          letterSpacing: 0.5,
+        }}
+        onPress={() => props.navigation.navigate("Transfers")}
+        icon={() => <MaterialCommunityIcons name="transfer" size={24} color="white" />}
+      />
+
 
       {/* Log out section */}
       <DrawerItem

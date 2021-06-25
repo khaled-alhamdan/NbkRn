@@ -3,10 +3,14 @@ import {
   View,
   StyleSheet,
 } from "react-native";
+import MyCarousel from "../../components/Carousel";
 const Home = () => {
   return (
-    <View>
-    
+    <View style={styles.view}>
+      <View style={styles.view2}>
+        <MyCarousel />
+
+    </View>
     </View>
   );
 };
@@ -20,5 +24,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  view2: {
+    marginTop: 20,
+    marginLeft: 20,
   },
 });

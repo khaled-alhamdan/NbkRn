@@ -17,7 +17,7 @@ import { Feather } from "@expo/vector-icons";
 
 // Importing screens
 import Home from "../screens/App/Home";
-
+import Transfers from "../screens/App/Transfers"
 const AppPages = createStackNavigator();
 const AppPagesScreen = () => {
   return (
@@ -49,6 +49,11 @@ const AppPagesScreen = () => {
           <AppPages.Screen
             name="Home"
             component={Home}
+            options={{ headerLeft: null }}
+          />
+           <AppPages.Screen
+            name="Transfers"
+            component={Transfers}
             options={{ headerLeft: null }}
           />
         </AppPages.Navigator>
