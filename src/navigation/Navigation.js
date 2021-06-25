@@ -87,6 +87,8 @@ export default observer(Navigation);
 
 const styles = StyleSheet.create({
   logo: {
-    width: 300,
+    width: 250,
+    height: 50,
+    // backgroundColor: "red",
   },
 });
